@@ -13,19 +13,26 @@ struct landscapingStructure: Identifiable {
     let areaPhoto: String
 }
 
-let rectangle = landscapingStructure(areaType: "Rectangle",
+let allShapes = [
+    
+    Rectangle = landscapingStructure(areaType: "Rectangle",
                                      areaPhoto: "rectangle")
-
-let circle = landscapingStructure(areaType: "Circle",
+    ,
+    
+    Circle = landscapingStructure(areaType: "Circle",
                                   areaPhoto: "circle")
-
-let rectangleWithHalfCircle = landscapingStructure(areaType: "Rectangle With A Half Circle",
+    ,
+    
+    RectangleWithHalfCircle = landscapingStructure(areaType: "Rectangle With A Half Circle",
                                                    areaPhoto: "rectangle with half circle")
-
-let threeRectangles = landscapingStructure(areaType: "Three Rectangles",
+    ,
+    
+    ThreeRectangles = landscapingStructure(areaType: "Three Rectangles",
                                            areaPhoto: "three rectangles")
-
-let twoRectangles = landscapingStructure(areaType: "Two Rectangles",
+    ,
+    
+    TwoRectangles = landscapingStructure(areaType: "Two Rectangles",
                                          areaPhoto: "two rectangles")
-
+    ,
+]
 
