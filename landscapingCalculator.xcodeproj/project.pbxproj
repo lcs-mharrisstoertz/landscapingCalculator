@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		CCECD8892992AD3400A08177 /* landscapingCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8882992AD3400A08177 /* landscapingCalculatorApp.swift */; };
-		CCECD88B2992AD3400A08177 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD88A2992AD3400A08177 /* ContentView.swift */; };
 		CCECD88D2992AD3800A08177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCECD88C2992AD3800A08177 /* Assets.xcassets */; };
 		CCECD8902992AD3800A08177 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCECD88F2992AD3800A08177 /* Preview Assets.xcassets */; };
+		CCECD8992992BEEF00A08177 /* listView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8982992BEEF00A08177 /* listView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CCECD8852992AD3400A08177 /* landscapingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = landscapingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCECD8882992AD3400A08177 /* landscapingCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landscapingCalculatorApp.swift; sourceTree = "<group>"; };
-		CCECD88A2992AD3400A08177 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CCECD88C2992AD3800A08177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCECD88F2992AD3800A08177 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCECD8982992BEEF00A08177 /* listView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				CCECD8882992AD3400A08177 /* landscapingCalculatorApp.swift */,
-				CCECD88A2992AD3400A08177 /* ContentView.swift */,
+				CCECD8972992BED000A08177 /* views */,
+				CCECD8A02992BFDB00A08177 /* landscapingModel */,
 				CCECD88C2992AD3800A08177 /* Assets.xcassets */,
 				CCECD88E2992AD3800A08177 /* Preview Content */,
 			);
@@ -65,6 +66,21 @@
 				CCECD88F2992AD3800A08177 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCECD8972992BED000A08177 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CCECD8982992BEEF00A08177 /* listView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		CCECD8A02992BFDB00A08177 /* landscapingModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = landscapingModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCECD88B2992AD3400A08177 /* ContentView.swift in Sources */,
+				CCECD8992992BEEF00A08177 /* listView.swift in Sources */,
 				CCECD8892992AD3400A08177 /* landscapingCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

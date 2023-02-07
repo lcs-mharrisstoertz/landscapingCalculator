@@ -11,7 +11,7 @@ import SwiftUI
 struct landscapingCalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            listView()
         }
     }
 }
