@@ -1,5 +1,5 @@
 //
-//  LandscapeCalculatorView.swift
+//  landscapeCalculatorView.swift
 //  landscapingCalculator
 //
 //  Created by Morgan Harris-Stoertz on 2023-02-07.
@@ -7,15 +7,24 @@
 
 import SwiftUI
 
-struct LandscapeCalculatorView: View {
+struct landscapeCalculatorView: View {
+    
+    //MARK: stored properties
+    let areaType: landscapingStructure
+    
+    
+    
+    //MARK: stored properties
     var body: some View {
-        Text("hello")
-        
+        VStack{
+            Text(landscapingStructure.areaType)
+            Image(landscapingStructure.areaPhoto)
+        }
     }
 }
 
-struct LandscapeCalculatorView_Previews: PreviewProvider {
+struct landscapeCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        LandscapeCalculatorView()
+        landscapeCalculatorView(areaName: "rectangle")
     }
 }

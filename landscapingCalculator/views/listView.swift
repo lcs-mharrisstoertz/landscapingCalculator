@@ -12,17 +12,16 @@ struct listView: View {
     var body: some View {
         List (allShapes) { allShapes in
             NavigationLink (destination: {
-                LandscapeCalculatorView(shape: currentShape)
+                landscapeCalculatorView(shape: currentShape)
             }, label: {
-                HStack{
-                    Text(currentShape.areaType)
-                    Image(currentShape.areaPhoto)
-                }
+                Text(favourite.description)
             })
+        }
+        .navigationTitle("Shape of Area")
             
         }
     }
-}
+
 
 struct listView_Previews: PreviewProvider {
     static var previews: some View {
@@ -32,29 +31,3 @@ struct listView_Previews: PreviewProvider {
     }
 }
 
-
-//import SwiftUI
-
-//struct AnimationsListView: View {
-    
- //   //MARK: Computed properties
-  //  var body: some View {
-        
-        List(favourites) {favourite in
-            
-            NavigationLink(destination: {
-                LottieView(animationNamed: favourite.fileName)
-                    .navigationTitle(favourite.description)
-            }, label: {
-                Text(favourite.description)
-            })
-        }
-        .navigationTitle("Useful Animations")
-    }
-}
-
-struct AnimationsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        AnimationsListView()
-    }
-}
