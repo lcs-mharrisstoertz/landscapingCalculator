@@ -10,9 +10,9 @@ import SwiftUI
 struct listView: View {
     //MARK: computed properties
     var body: some View {
-        List (allShapes) { currentShape in
+        List (allShapes) { allShapes in
             NavigationLink (destination: {
-                landscapingStructure(shape: currentShape)
+                LandscapeCalculatorView(shape: currentShape)
             }, label: {
                 HStack{
                     Text(currentShape.areaType)
