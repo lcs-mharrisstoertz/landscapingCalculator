@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct listView: View {
-    //MARK: computed properties
     var body: some View {
-        List (allShapes) { allShapes in
-            NavigationLink (destination: {
-                landscapeCalculatorView(shape: currentShape)
-            }, label: {
-                Text(favourite.description)
+        List(allShapes) { currentShape in
+            NavigationLink(destination: {
+                landscapeCalculatorView(areaType: currentShape)
+            }, label:{
+                Text(currentShape.areaName)
             })
-        }
-        .navigationTitle("Shape of Area")
             
         }
+        .navigationTitle("Select Area Type")
     }
-
+}
 
 struct listView_Previews: PreviewProvider {
     static var previews: some View {
@@ -30,4 +28,3 @@ struct listView_Previews: PreviewProvider {
         }
     }
 }
-

@@ -26,7 +26,7 @@ struct landscapeCalculatorView: View {
 struct landscapeCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            landscapeCalculatorView(areaType: landscapingStructure)
+            landscapeCalculatorView(areaType: landscapingStructure(areaName: "Circle", areaPhoto: "circle"))
         }
     }
 }
