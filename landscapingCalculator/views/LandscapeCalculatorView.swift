@@ -17,14 +17,16 @@ struct landscapeCalculatorView: View {
     //MARK: stored properties
     var body: some View {
         VStack{
-            Text(landscapingStructure.areaType)
-            Image(landscapingStructure.areaPhoto)
+            Text(areaType.areaName)
+            Image(areaType.areaPhoto)
         }
     }
 }
 
 struct landscapeCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        landscapeCalculatorView(areaName: "rectangle")
+        NavigationView{
+            landscapeCalculatorView(areaType: landscapingStructure)
+        }
     }
 }

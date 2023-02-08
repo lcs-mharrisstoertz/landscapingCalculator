@@ -9,29 +9,29 @@ import Foundation
 
 struct landscapingStructure: Identifiable {
     let id = UUID()
-    let areaType: String
+    let areaName: String
     let areaPhoto: String
 }
 
 let allShapes = [
     
-    landscapingStructure(areaType: "Rectangle",
+    landscapingStructure(areaName: "Rectangle",
                          areaPhoto: "rectangle")
     ,
     
-    landscapingStructure(areaType: "Circle",
+    landscapingStructure(areaName: "Circle",
                          areaPhoto: "circle")
     ,
     
-    landscapingStructure(areaType: "Rectangle With A Half Circle",
+    landscapingStructure(areaName: "Rectangle With A Half Circle",
                          areaPhoto: "rectangle with half circle")
     ,
     
-    landscapingStructure(areaType: "Three Rectangles",
+    landscapingStructure(areaName: "Three Rectangles",
                          areaPhoto: "three rectangles")
     ,
     
-    landscapingStructure(areaType: "Two Rectangles",
+    landscapingStructure(areaName: "Two Rectangles",
                          areaPhoto: "two rectangles")
     ,
 ]
