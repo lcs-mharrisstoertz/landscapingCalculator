@@ -42,7 +42,7 @@ struct LandscapeCalculatorView: View {
             return nil
         }
         
-        return length * width + radius * radius
+        return length * width + 0.5 * .pi * radius * radius
     }
 
     var areaResult: String {
@@ -75,13 +75,17 @@ struct LandscapeCalculatorView: View {
     
     var body: some View {
         VStack{
-            Text(areaType.areaName)
-                .font(Font.custom("Helvetica", size:35))
-                .bold()
-            
-            Image(areaType.areaPhoto)
-                .resizable()
-                .scaledToFit()
+            HStack{
+                Text(areaType.areaName)
+                    .font(Font.custom("Helvetica", size:35))
+                    .bold()
+                
+                Image(areaType.areaPhoto)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 150)
+            }
+          
             
             Picker(selection: $selectedLandscapeType, content: {
                 ForEach(allLandscapingTypes) { currentType in
@@ -91,12 +95,35 @@ struct LandscapeCalculatorView: View {
             }, label: {
                 Text("Landscape Type")
             })
-            .pickerStyle(.inline)
+            .pickerStyle(.menu)
             
             Text("Selected turf type:")
             Text(selectedLandscapeType.name)
             
+            
+            //text fields
+            VStack (spacing: 25){
+                TextField("Width...", text: $givenWidth)
+                    .font(.title2)
+                    .bold()
+                TextField("Length...", text: $givenLength)
+                    .font(.title2)
+                    .bold()
+                TextField("Radius...", text: $givenRadius)
+                    .font(.title2)
+                    .bold()
+            }
+            
+            //results
+            Text(priceResult)
+            Text(priceResult)
+            
+            
+            
+            
         }
+        
+        .padding()
     }
 }
 
