@@ -13,11 +13,56 @@ struct landscapeCalculatorView: View {
     let areaType: landscapingStructure
     
     //what is the landscaping type?
+    let landscapeType = ["Decomposed Gravel", "Crushed Limestone", "Mulch", "Turf", "Crushed Granite"]
+    
+    // What landscape type was selected?
+    @State var selectedLandscapeType = "Mulch"
+    
+    //dimensions
+    @State var givenLength = ""
+    @State var givenWidth = ""
+    @State var givenRadius = ""
+    
+    // convert selected landscaping type to price
+
+
     
     
     
+    //MARK: computed properties
     
-    //MARK: stored properties
+    //calculate area
+    var calculatedArea: Double? {
+        guard let length = Double(givenLength) else {
+            return nil
+        }
+        
+        guard let width = Double(givenWidth) else {
+            return nil
+        }
+        
+        guard let radius = Double(givenRadius) else {
+            return nil
+        }
+        
+        return length * width + radius * radius
+    }
+
+    var areaResult: String {
+        
+        guard let area = calculatedArea else {
+
+            return "Cannot be found. Please provide valid input."
+        }
+        
+        return area.formatted(.number.precision(.fractionLength(1)))
+        
+    }
+    
+    //calculate price
+//    var calculatedPrice:
+    
+    
     var body: some View {
         VStack{
             Text(areaType.areaName)
@@ -27,6 +72,17 @@ struct landscapeCalculatorView: View {
                 .resizable()
                 .scaledToFit()
             
+            Picker(selection: $selectedLandscapeType, content: {
+                ForEach(landscapeType, id: \.self) { currentType in
+                    Text(currentType)
+                }
+            }, label: {
+                Text("Landscape Type")
+            })
+            .pickerStyle(.inline)
+            
+            Text("Selected turf type")
+            Text(selectedLandscapeType)
             
         }
     }
