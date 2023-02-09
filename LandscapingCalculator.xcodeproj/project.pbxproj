@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CCEC4AAC29958CBC00FEB137 /* LandscapePickerStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC4AAB29958CBC00FEB137 /* LandscapePickerStructure.swift */; };
 		CCECD8892992AD3400A08177 /* LandscapingCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8882992AD3400A08177 /* LandscapingCalculatorApp.swift */; };
 		CCECD88D2992AD3800A08177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCECD88C2992AD3800A08177 /* Assets.xcassets */; };
 		CCECD8902992AD3800A08177 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCECD88F2992AD3800A08177 /* Preview Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CCEC4AAB29958CBC00FEB137 /* LandscapePickerStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapePickerStructure.swift; sourceTree = "<group>"; };
 		CCECD8852992AD3400A08177 /* LandscapingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandscapingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCECD8882992AD3400A08177 /* LandscapingCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapingCalculatorApp.swift; sourceTree = "<group>"; };
 		CCECD88C2992AD3800A08177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				CCECD8A32992C1AD00A08177 /* LandscapingStructure.swift */,
+				CCEC4AAB29958CBC00FEB137 /* LandscapePickerStructure.swift */,
 			);
 			path = LandscapingModel;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				CCECD8B2299331A900A08177 /* ListView.swift in Sources */,
 				CCECD8B0299310DF00A08177 /* LandscapeCalculatorView.swift in Sources */,
+				CCEC4AAC29958CBC00FEB137 /* LandscapePickerStructure.swift in Sources */,
 				CCECD8892992AD3400A08177 /* LandscapingCalculatorApp.swift in Sources */,
 				CCECD8A42992C1AD00A08177 /* LandscapingStructure.swift in Sources */,
 			);

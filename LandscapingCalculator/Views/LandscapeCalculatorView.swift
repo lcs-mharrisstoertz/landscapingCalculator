@@ -12,11 +12,8 @@ struct LandscapeCalculatorView: View {
     //MARK: stored properties
     let areaType: LandscapingStructure
     
-    //what is the Landscaping type?
-    let landscapeTypes = ["Decomposed Gravel", "Crushed Limestone", "Mulch", "Turf", "Crushed Granite"]
-    
     // What Landscape type was selected?
-    @State var selectedLandscapeType = "Mulch"
+    @State var selectedLandscapeType: LandscapeType = mulch
     
     //dimensions
     @State var givenLength = ""
@@ -60,7 +57,20 @@ struct LandscapeCalculatorView: View {
     }
     
     //calculate price
-//    var calculatedPrice:
+    var calculatedPrice: Double? {
+        guard let calculatedAreaUnwrapped = calculatedArea else {
+            return nil
+        }
+        return calculatedAreaUnwrapped * selectedLandscapeType.price
+    }
+    
+    var priceResult: String {
+        guard let price = calculatedPrice else {
+            return "Cannot be found. Please provide valid input."
+        }
+        
+        return price.formatted(.number.precision(.fractionLength(1)))
+    }
     
     
     var body: some View {
@@ -68,21 +78,23 @@ struct LandscapeCalculatorView: View {
             Text(areaType.areaName)
                 .font(Font.custom("Helvetica", size:35))
                 .bold()
+            
             Image(areaType.areaPhoto)
                 .resizable()
                 .scaledToFit()
             
             Picker(selection: $selectedLandscapeType, content: {
-                ForEach(landscapeTypes, id: \.self) { currentType in
-                    Text(currentType)
+                ForEach(allLandscapingTypes) { currentType in
+                    Text(currentType.name)
+                        .tag(currentType)
                 }
             }, label: {
                 Text("Landscape Type")
             })
             .pickerStyle(.inline)
             
-            Text("Selected turf type")
-            Text(selectedLandscapeType)
+            Text("Selected turf type:")
+            Text(selectedLandscapeType.name)
             
         }
     }

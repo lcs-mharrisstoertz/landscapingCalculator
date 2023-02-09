@@ -7,29 +7,29 @@
 
 import Foundation
 
-struct LandscapingStructure: Identifiable {
+struct LandscapingStructure: Identifiable, Hashable {
     let id = UUID()
     let areaName: String
     let areaPhoto: String
 }
 
 
-    
-   let Rectangle =  LandscapingStructure(areaName: "Rectangle",
-                         areaPhoto: "rectangle")
-    
-    let Circle = LandscapingStructure(areaName: "Circle",
-                         areaPhoto: "circle")
-    
-   let RectangleWithAHalfCircle = LandscapingStructure(areaName: "Rectangle With A Half Circle",
-                         areaPhoto: "recatangle with half circle")
-    
-    let ThreeRectangles = LandscapingStructure(areaName: "Three Rectangles",
-                         areaPhoto: "three rectangles")
-    
-    
-    let TwoRectangles = LandscapingStructure(areaName: "Two Rectangles",
-                         areaPhoto: "two rectangles")
-    
 
-let allShapes = [Rectangle, Circle, RectangleWithAHalfCircle, ThreeRectangles, TwoRectangles]
+let rectangle = LandscapingStructure(areaName: "Rectangle",
+                                     areaPhoto: "rectangle")
+
+let circle = LandscapingStructure(areaName: "Circle",
+                                  areaPhoto: "circle")
+
+let rectangleWithAHalfCircle = LandscapingStructure(areaName: "Rectangle With A Half Circle",
+                                                    areaPhoto: "recatangle with half circle")
+
+let threeRectangles = LandscapingStructure(areaName: "Three Rectangles",
+                                           areaPhoto: "three rectangles")
+
+
+let twoRectangles = LandscapingStructure(areaName: "Two Rectangles",
+                                         areaPhoto: "two rectangles")
+
+
+let allShapes = [rectangle, circle, rectangleWithAHalfCircle, threeRectangles, twoRectangles]
