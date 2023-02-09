@@ -13,7 +13,13 @@ struct listView: View {
             NavigationLink(destination: {
                 landscapeCalculatorView(areaType: currentShape)
             }, label:{
-                Text(currentShape.areaName)
+                HStack{
+                    Text(currentShape.areaName)
+                    Image(currentShape.areaPhoto)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height:75)
+                }
             })
             
         }

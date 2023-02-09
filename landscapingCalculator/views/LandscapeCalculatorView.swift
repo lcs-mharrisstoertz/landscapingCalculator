@@ -12,13 +12,22 @@ struct landscapeCalculatorView: View {
     //MARK: stored properties
     let areaType: landscapingStructure
     
+    //what is the landscaping type?
+    
+    
     
     
     //MARK: stored properties
     var body: some View {
         VStack{
             Text(areaType.areaName)
+                .font(Font.custom("Helvetica", size:35))
+                .bold()
             Image(areaType.areaPhoto)
+                .resizable()
+                .scaledToFit()
+            
+            
         }
     }
 }

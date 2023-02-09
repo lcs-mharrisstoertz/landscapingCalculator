@@ -22,7 +22,7 @@ struct landscapingStructure: Identifiable {
                          areaPhoto: "circle")
     
    let RectangleWithAHalfCircle = landscapingStructure(areaName: "Rectangle With A Half Circle",
-                         areaPhoto: "rectangle with half circle")
+                         areaPhoto: "recatangle with half circle")
     
     let ThreeRectangles = landscapingStructure(areaName: "Three Rectangles",
                          areaPhoto: "three rectangles")
