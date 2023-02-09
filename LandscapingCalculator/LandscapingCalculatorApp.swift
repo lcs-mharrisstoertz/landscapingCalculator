@@ -1,6 +1,6 @@
 //
-//  landscapingCalculatorApp.swift
-//  landscapingCalculator
+//  LandscapingCalculatorApp.swift
+//  LandscapingCalculator
 //
 //  Created by Morgan Harris-Stoertz on 2023-02-07.
 //
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct landscapingCalculatorApp: App {
+struct LandscapingCalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            listView()
+            ListView()
         }
     }
 }

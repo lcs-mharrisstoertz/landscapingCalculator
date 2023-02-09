@@ -1,21 +1,21 @@
 //
-//  landscapeCalculatorView.swift
-//  landscapingCalculator
+//  LandscapeCalculatorView.swift
+//  LandscapingCalculator
 //
 //  Created by Morgan Harris-Stoertz on 2023-02-07.
 //
 
 import SwiftUI
 
-struct landscapeCalculatorView: View {
+struct LandscapeCalculatorView: View {
     
     //MARK: stored properties
-    let areaType: landscapingStructure
+    let areaType: LandscapingStructure
     
-    //what is the landscaping type?
-    let landscapeType = ["Decomposed Gravel", "Crushed Limestone", "Mulch", "Turf", "Crushed Granite"]
+    //what is the Landscaping type?
+    let landscapeTypes = ["Decomposed Gravel", "Crushed Limestone", "Mulch", "Turf", "Crushed Granite"]
     
-    // What landscape type was selected?
+    // What Landscape type was selected?
     @State var selectedLandscapeType = "Mulch"
     
     //dimensions
@@ -23,7 +23,7 @@ struct landscapeCalculatorView: View {
     @State var givenWidth = ""
     @State var givenRadius = ""
     
-    // convert selected landscaping type to price
+    // convert selected Landscaping type to price
 
 
     
@@ -73,7 +73,7 @@ struct landscapeCalculatorView: View {
                 .scaledToFit()
             
             Picker(selection: $selectedLandscapeType, content: {
-                ForEach(landscapeType, id: \.self) { currentType in
+                ForEach(landscapeTypes, id: \.self) { currentType in
                     Text(currentType)
                 }
             }, label: {
@@ -88,10 +88,10 @@ struct landscapeCalculatorView: View {
     }
 }
 
-struct landscapeCalculatorView_Previews: PreviewProvider {
+struct LandscapeCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            landscapeCalculatorView(areaType: landscapingStructure(areaName: "Circle", areaPhoto: "circle"))
+            LandscapeCalculatorView(areaType: LandscapingStructure(areaName: "Circle", areaPhoto: "circle"))
         }
     }
 }

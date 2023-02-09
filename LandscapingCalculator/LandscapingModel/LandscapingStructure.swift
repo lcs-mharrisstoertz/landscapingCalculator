@@ -1,13 +1,13 @@
 //
-//  landscapingStructure.swift
-//  landscapingCalculator
+//  LandscapingStructure.swift
+//  LandscapingCalculator
 //
 //  Created by Morgan Harris-Stoertz on 2023-02-07.
 //
 
 import Foundation
 
-struct landscapingStructure: Identifiable {
+struct LandscapingStructure: Identifiable {
     let id = UUID()
     let areaName: String
     let areaPhoto: String
@@ -15,20 +15,20 @@ struct landscapingStructure: Identifiable {
 
 
     
-   let Rectangle =  landscapingStructure(areaName: "Rectangle",
+   let Rectangle =  LandscapingStructure(areaName: "Rectangle",
                          areaPhoto: "rectangle")
     
-    let Circle = landscapingStructure(areaName: "Circle",
+    let Circle = LandscapingStructure(areaName: "Circle",
                          areaPhoto: "circle")
     
-   let RectangleWithAHalfCircle = landscapingStructure(areaName: "Rectangle With A Half Circle",
+   let RectangleWithAHalfCircle = LandscapingStructure(areaName: "Rectangle With A Half Circle",
                          areaPhoto: "recatangle with half circle")
     
-    let ThreeRectangles = landscapingStructure(areaName: "Three Rectangles",
+    let ThreeRectangles = LandscapingStructure(areaName: "Three Rectangles",
                          areaPhoto: "three rectangles")
     
     
-    let TwoRectangles = landscapingStructure(areaName: "Two Rectangles",
+    let TwoRectangles = LandscapingStructure(areaName: "Two Rectangles",
                          areaPhoto: "two rectangles")
     
 

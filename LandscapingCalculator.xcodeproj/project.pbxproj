@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CCECD8892992AD3400A08177 /* landscapingCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8882992AD3400A08177 /* landscapingCalculatorApp.swift */; };
+		CCECD8892992AD3400A08177 /* LandscapingCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8882992AD3400A08177 /* LandscapingCalculatorApp.swift */; };
 		CCECD88D2992AD3800A08177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCECD88C2992AD3800A08177 /* Assets.xcassets */; };
 		CCECD8902992AD3800A08177 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCECD88F2992AD3800A08177 /* Preview Assets.xcassets */; };
-		CCECD8A42992C1AD00A08177 /* landscapingStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8A32992C1AD00A08177 /* landscapingStructure.swift */; };
-		CCECD8B0299310DF00A08177 /* landscapeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8AF299310DF00A08177 /* landscapeCalculatorView.swift */; };
-		CCECD8B2299331A900A08177 /* listView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8B1299331A900A08177 /* listView.swift */; };
+		CCECD8A42992C1AD00A08177 /* LandscapingStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8A32992C1AD00A08177 /* LandscapingStructure.swift */; };
+		CCECD8B0299310DF00A08177 /* LandscapeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8AF299310DF00A08177 /* LandscapeCalculatorView.swift */; };
+		CCECD8B2299331A900A08177 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8B1299331A900A08177 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CCECD8852992AD3400A08177 /* landscapingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = landscapingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCECD8882992AD3400A08177 /* landscapingCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landscapingCalculatorApp.swift; sourceTree = "<group>"; };
+		CCECD8852992AD3400A08177 /* LandscapingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandscapingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCECD8882992AD3400A08177 /* LandscapingCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapingCalculatorApp.swift; sourceTree = "<group>"; };
 		CCECD88C2992AD3800A08177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCECD88F2992AD3800A08177 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CCECD8A32992C1AD00A08177 /* landscapingStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landscapingStructure.swift; sourceTree = "<group>"; };
-		CCECD8AF299310DF00A08177 /* landscapeCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landscapeCalculatorView.swift; sourceTree = "<group>"; };
-		CCECD8B1299331A900A08177 /* listView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listView.swift; sourceTree = "<group>"; };
+		CCECD8A32992C1AD00A08177 /* LandscapingStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapingStructure.swift; sourceTree = "<group>"; };
+		CCECD8AF299310DF00A08177 /* LandscapeCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeCalculatorView.swift; sourceTree = "<group>"; };
+		CCECD8B1299331A900A08177 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 		CCECD87C2992AD3400A08177 = {
 			isa = PBXGroup;
 			children = (
-				CCECD8872992AD3400A08177 /* landscapingCalculator */,
+				CCECD8872992AD3400A08177 /* LandscapingCalculator */,
 				CCECD8862992AD3400A08177 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,21 +47,21 @@
 		CCECD8862992AD3400A08177 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCECD8852992AD3400A08177 /* landscapingCalculator.app */,
+				CCECD8852992AD3400A08177 /* LandscapingCalculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CCECD8872992AD3400A08177 /* landscapingCalculator */ = {
+		CCECD8872992AD3400A08177 /* LandscapingCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				CCECD8882992AD3400A08177 /* landscapingCalculatorApp.swift */,
-				CCECD8972992BED000A08177 /* views */,
-				CCECD8A02992BFDB00A08177 /* landscapingModel */,
+				CCECD8882992AD3400A08177 /* LandscapingCalculatorApp.swift */,
+				CCECD8972992BED000A08177 /* Views */,
+				CCECD8A02992BFDB00A08177 /* LandscapingModel */,
 				CCECD88C2992AD3800A08177 /* Assets.xcassets */,
 				CCECD88E2992AD3800A08177 /* Preview Content */,
 			);
-			path = landscapingCalculator;
+			path = LandscapingCalculator;
 			sourceTree = "<group>";
 		};
 		CCECD88E2992AD3800A08177 /* Preview Content */ = {
@@ -72,29 +72,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CCECD8972992BED000A08177 /* views */ = {
+		CCECD8972992BED000A08177 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CCECD8B1299331A900A08177 /* listView.swift */,
-				CCECD8AF299310DF00A08177 /* landscapeCalculatorView.swift */,
+				CCECD8B1299331A900A08177 /* ListView.swift */,
+				CCECD8AF299310DF00A08177 /* LandscapeCalculatorView.swift */,
 			);
-			path = views;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		CCECD8A02992BFDB00A08177 /* landscapingModel */ = {
+		CCECD8A02992BFDB00A08177 /* LandscapingModel */ = {
 			isa = PBXGroup;
 			children = (
-				CCECD8A32992C1AD00A08177 /* landscapingStructure.swift */,
+				CCECD8A32992C1AD00A08177 /* LandscapingStructure.swift */,
 			);
-			path = landscapingModel;
+			path = LandscapingModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CCECD8842992AD3400A08177 /* landscapingCalculator */ = {
+		CCECD8842992AD3400A08177 /* LandscapingCalculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCECD8932992AD3800A08177 /* Build configuration list for PBXNativeTarget "landscapingCalculator" */;
+			buildConfigurationList = CCECD8932992AD3800A08177 /* Build configuration list for PBXNativeTarget "LandscapingCalculator" */;
 			buildPhases = (
 				CCECD8812992AD3400A08177 /* Sources */,
 				CCECD8822992AD3400A08177 /* Frameworks */,
@@ -104,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = landscapingCalculator;
+			name = LandscapingCalculator;
 			productName = landscapingCalculator;
-			productReference = CCECD8852992AD3400A08177 /* landscapingCalculator.app */;
+			productReference = CCECD8852992AD3400A08177 /* LandscapingCalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CCECD8802992AD3400A08177 /* Build configuration list for PBXProject "landscapingCalculator" */;
+			buildConfigurationList = CCECD8802992AD3400A08177 /* Build configuration list for PBXProject "LandscapingCalculator" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CCECD8842992AD3400A08177 /* landscapingCalculator */,
+				CCECD8842992AD3400A08177 /* LandscapingCalculator */,
 			);
 		};
 /* End PBXProject section */
@@ -159,10 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCECD8B2299331A900A08177 /* listView.swift in Sources */,
-				CCECD8B0299310DF00A08177 /* landscapeCalculatorView.swift in Sources */,
-				CCECD8892992AD3400A08177 /* landscapingCalculatorApp.swift in Sources */,
-				CCECD8A42992C1AD00A08177 /* landscapingStructure.swift in Sources */,
+				CCECD8B2299331A900A08177 /* ListView.swift in Sources */,
+				CCECD8B0299310DF00A08177 /* LandscapeCalculatorView.swift in Sources */,
+				CCECD8892992AD3400A08177 /* LandscapingCalculatorApp.swift in Sources */,
+				CCECD8A42992C1AD00A08177 /* LandscapingStructure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +342,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CCECD8802992AD3400A08177 /* Build configuration list for PBXProject "landscapingCalculator" */ = {
+		CCECD8802992AD3400A08177 /* Build configuration list for PBXProject "LandscapingCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCECD8912992AD3800A08177 /* Debug */,
@@ -351,7 +351,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCECD8932992AD3800A08177 /* Build configuration list for PBXNativeTarget "landscapingCalculator" */ = {
+		CCECD8932992AD3800A08177 /* Build configuration list for PBXNativeTarget "LandscapingCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCECD8942992AD3800A08177 /* Debug */,
