@@ -21,8 +21,8 @@ struct LandscapeCalculatorView: View {
     @State var givenRadius = ""
     
     // convert selected Landscaping type to price
-
-
+    
+    
     
     
     
@@ -44,12 +44,12 @@ struct LandscapeCalculatorView: View {
         
         return length * width + 0.5 * .pi * radius * radius
     }
-
+    
     var areaResult: String {
         
         guard let area = calculatedArea else {
-
-            return "Cannot be found. Please provide valid input."
+            
+            return "Cannot be found..."
         }
         
         return area.formatted(.number.precision(.fractionLength(1)))
@@ -66,13 +66,13 @@ struct LandscapeCalculatorView: View {
     
     var priceResult: String {
         guard let price = calculatedPrice else {
-            return "Cannot be found. Please provide valid input."
+            return "Cannot be found... "
         }
         
         return price.formatted(.number.precision(.fractionLength(1)))
     }
     
-    
+    //interface
     var body: some View {
         VStack{
             HStack{
@@ -85,41 +85,96 @@ struct LandscapeCalculatorView: View {
                     .scaledToFit()
                     .frame(height: 150)
             }
-          
             
-            Picker(selection: $selectedLandscapeType, content: {
-                ForEach(allLandscapingTypes) { currentType in
-                    Text(currentType.name)
-                        .tag(currentType)
-                }
-            }, label: {
-                Text("Landscape Type")
-            })
-            .pickerStyle(.menu)
-            
-            Text("Selected turf type:")
-            Text(selectedLandscapeType.name)
+            //picker
+            Group{
+                Text("Select Landscaping Type")
+                    .font(Font.custom("Helvetica", size:25))
+                    .bold()
+                
+                
+                Picker(selection: $selectedLandscapeType, content: {
+                    ForEach(allLandscapingTypes) { currentType in
+                        Text(currentType.name)
+                            .tag(currentType)
+                    }
+                }, label: {
+                    Text("Landscape Type")
+                })
+                .pickerStyle(.inline)
+                
+                Text("Selected turf type:")
+                    .font(.title2)
+                    .bold()
+                Text(selectedLandscapeType.name)
+                    .font(.title2)
+                
+                Spacer()
+            }
             
             
             //text fields
-            VStack (spacing: 25){
-                TextField("Width...", text: $givenWidth)
-                    .font(.title2)
-                    .bold()
-                TextField("Length...", text: $givenLength)
-                    .font(.title2)
-                    .bold()
-                TextField("Radius...", text: $givenRadius)
-                    .font(.title2)
-                    .bold()
+            Group{
+                VStack (spacing: 15){
+                    HStack{
+                        Text("Enter Width")
+                            .font(Font.custom("Helvetica", size:25))
+                            .bold()
+                        Spacer()
+                    }
+                    TextField("Width...", text: $givenWidth)
+                        .font(.title2)
+                    HStack{
+                        Text("Enter Length")
+                            .font(Font.custom("Helvetica", size:25))
+                            .bold()
+                        Spacer()
+                    }
+                    TextField("Length...", text: $givenLength)
+                        .font(.title2)
+                    HStack{
+                        Text("Enter Radius")
+                            .font(Font.custom("Helvetica", size:25))
+                            .bold()
+                        Spacer()
+                    }
+                    TextField("Radius...", text: $givenRadius)
+                        .font(.title2)
+                }
             }
             
             //results
-            Text(priceResult)
-            Text(priceResult)
             
+            Group{
+                
+                Text("Area")
+                    .font(Font.custom("Helvetica", size:25))
+                    .bold()
+                HStack{
+                    Text(areaResult)
+                        .font(.title2)
+                    Text("sq. ft")
+                        .font(.title2)
+                        .bold()
+                }
+                
+                
+                Spacer()
+                
+                Text("Cost")
+                    .font(Font.custom("Helvetica", size:25))
+                    .bold()
+                HStack{
+                    Text("$")
+                        .font(.title2)
+                        .bold()
+                    
+                    Text(priceResult)
+                        .font(.title2)
+                }
+            }
             
-            
+            Spacer()
             
         }
         
