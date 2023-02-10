@@ -13,6 +13,7 @@
 		CCEC4AB22996D04800FEB137 /* RectangleHalfCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC4AB12996D04800FEB137 /* RectangleHalfCircleView.swift */; };
 		CCEC4AB42996D05D00FEB137 /* ThreeRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC4AB32996D05D00FEB137 /* ThreeRectangleView.swift */; };
 		CCEC4AB62996D07400FEB137 /* TwoRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC4AB52996D07400FEB137 /* TwoRectangleView.swift */; };
+		CCEC4ABA2996DD2800FEB137 /* TitlePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC4AB92996DD2800FEB137 /* TitlePhotoView.swift */; };
 		CCECD8892992AD3400A08177 /* LandscapingCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECD8882992AD3400A08177 /* LandscapingCalculatorApp.swift */; };
 		CCECD88D2992AD3800A08177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCECD88C2992AD3800A08177 /* Assets.xcassets */; };
 		CCECD8902992AD3800A08177 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCECD88F2992AD3800A08177 /* Preview Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		CCEC4AB12996D04800FEB137 /* RectangleHalfCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleHalfCircleView.swift; sourceTree = "<group>"; };
 		CCEC4AB32996D05D00FEB137 /* ThreeRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeRectangleView.swift; sourceTree = "<group>"; };
 		CCEC4AB52996D07400FEB137 /* TwoRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoRectangleView.swift; sourceTree = "<group>"; };
+		CCEC4AB92996DD2800FEB137 /* TitlePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePhotoView.swift; sourceTree = "<group>"; };
 		CCECD8852992AD3400A08177 /* LandscapingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandscapingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCECD8882992AD3400A08177 /* LandscapingCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapingCalculatorApp.swift; sourceTree = "<group>"; };
 		CCECD88C2992AD3800A08177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				CCECD8882992AD3400A08177 /* LandscapingCalculatorApp.swift */,
 				CCECD8972992BED000A08177 /* Views */,
 				CCECD8A02992BFDB00A08177 /* LandscapingModel */,
+				CCECD8AF299310DF00A08177 /* LandscapeCalculatorView.swift */,
 				CCECD88C2992AD3800A08177 /* Assets.xcassets */,
 				CCECD88E2992AD3800A08177 /* Preview Content */,
 			);
@@ -88,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				CCECD8B1299331A900A08177 /* ListView.swift */,
-				CCECD8AF299310DF00A08177 /* LandscapeCalculatorView.swift */,
 				CCEC4AAD2996CFFD00FEB137 /* RectangleView.swift */,
 				CCEC4AAF2996D02700FEB137 /* CircleView.swift */,
 				CCEC4AB12996D04800FEB137 /* RectangleHalfCircleView.swift */,
@@ -103,6 +105,7 @@
 			children = (
 				CCECD8A32992C1AD00A08177 /* LandscapingStructure.swift */,
 				CCEC4AAB29958CBC00FEB137 /* LandscapePickerStructure.swift */,
+				CCEC4AB92996DD2800FEB137 /* TitlePhotoView.swift */,
 			);
 			path = LandscapingModel;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEC4ABA2996DD2800FEB137 /* TitlePhotoView.swift in Sources */,
 				CCECD8B2299331A900A08177 /* ListView.swift in Sources */,
 				CCECD8B0299310DF00A08177 /* LandscapeCalculatorView.swift in Sources */,
 				CCEC4AAE2996CFFD00FEB137 /* RectangleView.swift in Sources */,

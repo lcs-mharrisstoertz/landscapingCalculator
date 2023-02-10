@@ -10,17 +10,39 @@ import SwiftUI
 struct ListView: View {
     var body: some View {
             
-            List(allShapes) { currentShape in
+            List {
                 NavigationLink(destination: {
-                    LandscapeCalculatorView(areaType: currentShape)
-                }, label:{
-                    HStack{
-                        Text(currentShape.areaName)
-                        Image(currentShape.areaPhoto)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height:65)
-                    }
+                    RectangleView(areaType: LandscapingStructure(areaName: "Rectangle", areaPhoto: "rectangle"))
+                }, label: {
+                    TitlePhotoView(photo: "rectangle", title: "Rectangle")
+                    
+                })
+                
+                NavigationLink(destination: {
+                    CircleView(areaType: LandscapingStructure(areaName: "Circle", areaPhoto: "circle"))
+                }, label: {
+                    TitlePhotoView(photo: "circle", title: "Circle")
+                    
+                })
+                NavigationLink(destination: {
+                    RectangleHalfCircleView(areaType: LandscapingStructure(areaName: "Rectangle With A Half Circle", areaPhoto: "recatangle with half circle"))
+                }, label: {
+                    TitlePhotoView(photo: "recatangle with half circle", title: "Rectangle With A Half Circle")
+                    
+                })
+                
+                NavigationLink(destination: {
+                    ThreeRectangleView(areaType: LandscapingStructure(areaName: "Three Rectangles", areaPhoto: "three rectangles"))
+                }, label: {
+                    TitlePhotoView(photo: "three rectangles", title: "Three Rectangles")
+                    
+                })
+                
+                NavigationLink(destination: {
+                    TwoRectangleView(areaType: LandscapingStructure(areaName: "Two Rectangles", areaPhoto: "two rectangles"))
+                }, label: {
+                    TitlePhotoView(photo: "two rectangles", title: "Two Rectangles")
+                    
                 })
             }
         
