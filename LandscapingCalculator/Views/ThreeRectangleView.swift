@@ -1,14 +1,13 @@
 //
-//  LandscapeCalculatorView.swift
+//  ThreeRectangleView.swift
 //  LandscapingCalculator
 //
-//  Created by Morgan Harris-Stoertz on 2023-02-07.
+//  Created by Morgan Harris-Stoertz on 2023-02-10.
 //
 
 import SwiftUI
 
-struct LandscapeCalculatorView: View {
-    
+struct ThreeRectangleView: View {
     //MARK: stored properties
     let areaType: LandscapingStructure
     
@@ -195,10 +194,8 @@ struct LandscapeCalculatorView: View {
     
 }
 
-struct LandscapeCalculatorView_Previews: PreviewProvider {
+struct ThreeRectangleView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
-            LandscapeCalculatorView(areaType: LandscapingStructure(areaName: "Circle", areaPhoto: "circle"))
-        }
+        ThreeRectangleView(areaType: LandscapingStructure(areaName: "Three Rectangles", areaPhoto: "three rectangles"))
     }
 }

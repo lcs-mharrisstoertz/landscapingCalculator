@@ -1,14 +1,13 @@
 //
-//  LandscapeCalculatorView.swift
+//  RectangleView.swift
 //  LandscapingCalculator
 //
-//  Created by Morgan Harris-Stoertz on 2023-02-07.
+//  Created by Morgan Harris-Stoertz on 2023-02-10.
 //
 
 import SwiftUI
 
-struct LandscapeCalculatorView: View {
-    
+struct RectangleView: View {
     //MARK: stored properties
     let areaType: LandscapingStructure
     
@@ -38,11 +37,7 @@ struct LandscapeCalculatorView: View {
             return nil
         }
         
-        guard let radius = Double(givenRadius) else {
-            return nil
-        }
-        
-        return length * width + 0.5 * .pi * radius * radius
+        return length * width
     }
     
     var areaResult: String {
@@ -141,14 +136,6 @@ struct LandscapeCalculatorView: View {
                         }
                         TextField("Length...", text: $givenLength)
                             .font(.title2)
-                        HStack{
-                            Text("Enter Radius")
-                                .font(Font.custom("Helvetica", size:20))
-                                .bold()
-                            Spacer()
-                        }
-                        TextField("Radius...", text: $givenRadius)
-                            .font(.title2)
                     }
                 }
                 
@@ -194,11 +181,8 @@ struct LandscapeCalculatorView: View {
     }
     
 }
-
-struct LandscapeCalculatorView_Previews: PreviewProvider {
+struct RectangleView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
-            LandscapeCalculatorView(areaType: LandscapingStructure(areaName: "Circle", areaPhoto: "circle"))
-        }
+        RectangleView(areaType: LandscapingStructure(areaName: "Rectangle", areaPhoto: "rectangle"))
     }
 }

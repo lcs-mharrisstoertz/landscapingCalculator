@@ -18,7 +18,7 @@ let crushedLimestone = LandscapeType(name: "Crushed Limestone  $1.69/sq.ft", pri
 
 let mulch = LandscapeType(name: "Mulch  $0.30/sq.ft", price: 0.30)
 
-let turf = LandscapeType(name: "Turf  $8.50/sq.ft", price: 8.50)
+let turf = LandscapeType(name: "Turf  $5.50/sq.ft", price: 5.50)
 
 let crushedGranite = LandscapeType(name: "Crushed Granite  $1.79/sq.ft", price: 1.79)
 

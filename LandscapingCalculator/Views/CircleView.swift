@@ -1,14 +1,13 @@
 //
-//  LandscapeCalculatorView.swift
+//  CircleView.swift
 //  LandscapingCalculator
 //
-//  Created by Morgan Harris-Stoertz on 2023-02-07.
+//  Created by Morgan Harris-Stoertz on 2023-02-10.
 //
 
 import SwiftUI
 
-struct LandscapeCalculatorView: View {
-    
+struct CircleView: View {
     //MARK: stored properties
     let areaType: LandscapingStructure
     
@@ -30,19 +29,12 @@ struct LandscapeCalculatorView: View {
     
     //calculate area
     var calculatedArea: Double? {
-        guard let length = Double(givenLength) else {
-            return nil
-        }
-        
-        guard let width = Double(givenWidth) else {
-            return nil
-        }
-        
+     
         guard let radius = Double(givenRadius) else {
             return nil
         }
         
-        return length * width + 0.5 * .pi * radius * radius
+        return .pi * radius * radius
     }
     
     var areaResult: String {
@@ -126,22 +118,6 @@ struct LandscapeCalculatorView: View {
                 Group{
                     VStack (spacing: 10){
                         HStack{
-                            Text("Enter Width")
-                                .font(Font.custom("Helvetica", size:20))
-                                .bold()
-                            Spacer()
-                        }
-                        TextField("Width...", text: $givenWidth)
-                            .font(.title2)
-                        HStack{
-                            Text("Enter Length")
-                                .font(Font.custom("Helvetica", size:20))
-                                .bold()
-                            Spacer()
-                        }
-                        TextField("Length...", text: $givenLength)
-                            .font(.title2)
-                        HStack{
                             Text("Enter Radius")
                                 .font(Font.custom("Helvetica", size:20))
                                 .bold()
@@ -195,10 +171,10 @@ struct LandscapeCalculatorView: View {
     
 }
 
-struct LandscapeCalculatorView_Previews: PreviewProvider {
+struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            LandscapeCalculatorView(areaType: LandscapingStructure(areaName: "Circle", areaPhoto: "circle"))
+            CircleView(areaType: LandscapingStructure(areaName: "Circle", areaPhoto: "circle"))
         }
     }
 }
