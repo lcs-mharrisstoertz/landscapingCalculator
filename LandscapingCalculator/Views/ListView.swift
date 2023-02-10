@@ -9,20 +9,21 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        List(allShapes) { currentShape in
-            NavigationLink(destination: {
-                LandscapeCalculatorView(areaType: currentShape)
-            }, label:{
-                HStack{
-                    Text(currentShape.areaName)
-                    Image(currentShape.areaPhoto)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height:75)
-                }
-            })
             
-        }
+            List(allShapes) { currentShape in
+                NavigationLink(destination: {
+                    LandscapeCalculatorView(areaType: currentShape)
+                }, label:{
+                    HStack{
+                        Text(currentShape.areaName)
+                        Image(currentShape.areaPhoto)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:65)
+                    }
+                })
+            }
+        
         .navigationTitle("Select Area Type")
     }
 }

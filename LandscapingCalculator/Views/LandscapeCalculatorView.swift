@@ -74,112 +74,116 @@ struct LandscapeCalculatorView: View {
     
     //interface
     var body: some View {
-        VStack{
-            HStack{
-                Text(areaType.areaName)
-                    .font(Font.custom("Helvetica", size:35))
-                    .bold()
-                
-                Image(areaType.areaPhoto)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 150)
-            }
-            
-            //picker
-            Group{
-                Text("Select Landscaping Type")
-                    .font(Font.custom("Helvetica", size:25))
-                    .bold()
-                
-                
-                Picker(selection: $selectedLandscapeType, content: {
-                    ForEach(allLandscapingTypes) { currentType in
-                        Text(currentType.name)
-                            .tag(currentType)
-                    }
-                }, label: {
-                    Text("Landscape Type")
-                })
-                .pickerStyle(.inline)
-                
-                Text("Selected turf type:")
-                    .font(.title2)
-                    .bold()
-                Text(selectedLandscapeType.name)
-                    .font(.title2)
-                
-                Spacer()
-            }
-            
-            
-            //text fields
-            Group{
-                VStack (spacing: 15){
-                    HStack{
-                        Text("Enter Width")
-                            .font(Font.custom("Helvetica", size:25))
-                            .bold()
-                        Spacer()
-                    }
-                    TextField("Width...", text: $givenWidth)
-                        .font(.title2)
-                    HStack{
-                        Text("Enter Length")
-                            .font(Font.custom("Helvetica", size:25))
-                            .bold()
-                        Spacer()
-                    }
-                    TextField("Length...", text: $givenLength)
-                        .font(.title2)
-                    HStack{
-                        Text("Enter Radius")
-                            .font(Font.custom("Helvetica", size:25))
-                            .bold()
-                        Spacer()
-                    }
-                    TextField("Radius...", text: $givenRadius)
-                        .font(.title2)
-                }
-            }
-            
-            //results
-            
-            Group{
-                
-                Text("Area")
-                    .font(Font.custom("Helvetica", size:25))
-                    .bold()
+      //  ScrollView{
+            VStack{
                 HStack{
-                    Text(areaResult)
-                        .font(.title2)
-                    Text("sq. ft")
-                        .font(.title2)
-                        .bold()
-                }
-                
-                
-                Spacer()
-                
-                Text("Cost")
-                    .font(Font.custom("Helvetica", size:25))
-                    .bold()
-                HStack{
-                    Text("$")
-                        .font(.title2)
+                    Text(areaType.areaName)
+                        .font(Font.custom("Helvetica", size:30))
                         .bold()
                     
-                    Text(priceResult)
-                        .font(.title2)
+                    Image(areaType.areaPhoto)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 150)
                 }
+                
+                //picker
+                Group{
+                    Text("Select Landscaping Type")
+                        .font(Font.custom("Helvetica", size:20))
+                        .bold()
+                    
+                    
+                    Picker(selection: $selectedLandscapeType, content: {
+                        ForEach(allLandscapingTypes) { currentType in
+                            Text(currentType.name)
+                                .tag(currentType)
+                        }
+                    }, label: {
+                        Text("Landscape Type")
+                    })
+                    .pickerStyle(.inline)
+                    
+                //   Text("Selected turf type:")
+                //       .font(.title2)
+                //       .bold()
+                //  Text(selectedLandscapeType.name)
+                //    .font(.title2)
+                    
+                    Spacer()
+                }
+                
+                
+                //text fields
+                Group{
+                    VStack (spacing: 10){
+                        HStack{
+                            Text("Enter Width")
+                                .font(Font.custom("Helvetica", size:20))
+                                .bold()
+                            Spacer()
+                        }
+                        TextField("Width...", text: $givenWidth)
+                            .font(.title2)
+                        HStack{
+                            Text("Enter Length")
+                                .font(Font.custom("Helvetica", size:20))
+                                .bold()
+                            Spacer()
+                        }
+                        TextField("Length...", text: $givenLength)
+                            .font(.title2)
+                        HStack{
+                            Text("Enter Radius")
+                                .font(Font.custom("Helvetica", size:20))
+                                .bold()
+                            Spacer()
+                        }
+                        TextField("Radius...", text: $givenRadius)
+                            .font(.title2)
+                    }
+                }
+                
+                //results
+                
+                Group{
+                    
+                    Text("Area")
+                        .font(Font.custom("Helvetica", size:25))
+                        .bold()
+                    HStack{
+                        Text(areaResult)
+                            .font(.title3)
+                        Text("sq. ft")
+                            .font(.title3)
+                            .bold()
+                    }
+                    
+                    
+                    Spacer()
+                    
+                    Text("Cost")
+                        .font(Font.custom("Helvetica", size:25))
+                        .bold()
+                    HStack{
+                        Text("$")
+                            .font(.title3)
+                            .bold()
+                        
+                        Text(priceResult)
+                            .font(.title3)
+                    }
+                }
+                
+                Spacer(minLength: 15)
+                
             }
             
-            Spacer()
+            .padding()
+  //      }
             
         }
-        
-        .padding()
-    }
+     
 }
 
 struct LandscapeCalculatorView_Previews: PreviewProvider {
