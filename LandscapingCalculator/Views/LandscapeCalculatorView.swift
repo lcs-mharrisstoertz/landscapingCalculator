@@ -74,8 +74,12 @@ struct LandscapeCalculatorView: View {
     
     //interface
     var body: some View {
-      //  ScrollView{
+        ScrollView{
             VStack{
+                Text("Landscaping Calculator")
+                    .font(Font.custom("Helvetica", size:30))
+                    .bold()
+                
                 HStack{
                     Text(areaType.areaName)
                         .font(Font.custom("Helvetica", size:30))
@@ -102,15 +106,19 @@ struct LandscapeCalculatorView: View {
                     }, label: {
                         Text("Landscape Type")
                     })
-                    .pickerStyle(.inline)
+                    .pickerStyle(.wheel)
+                    .frame(height:100)
                     
-                //   Text("Selected turf type:")
-                //       .font(.title2)
-                //       .bold()
-                //  Text(selectedLandscapeType.name)
-                //    .font(.title2)
                     
-                    Spacer()
+                    Text("Selected landscaping type:")
+                        .font(.title2)
+                        .bold()
+                    Text(selectedLandscapeType.name)
+                        .font(.title2)
+                    
+                   // Spacer(minLength: 15)
+                    
+                    
                 }
                 
                 
@@ -180,10 +188,10 @@ struct LandscapeCalculatorView: View {
             }
             
             .padding()
-  //      }
-            
         }
-     
+        
+    }
+    
 }
 
 struct LandscapeCalculatorView_Previews: PreviewProvider {
