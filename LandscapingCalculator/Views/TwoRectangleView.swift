@@ -16,8 +16,9 @@ struct TwoRectangleView: View {
     
     //dimensions
     @State var givenLength = ""
+    @State var givenLengthTwo = ""
     @State var givenWidth = ""
-    @State var givenRadius = ""
+    @State var givenWidthTwo = ""
     
     // convert selected Landscaping type to price
     
@@ -33,15 +34,22 @@ struct TwoRectangleView: View {
             return nil
         }
         
+        guard let length2 = Double(givenLengthTwo) else {
+            return nil
+        }
+        
         guard let width = Double(givenWidth) else {
             return nil
         }
         
-        guard let radius = Double(givenRadius) else {
+        guard let width2 = Double(givenWidthTwo) else {
             return nil
         }
+
         
-        return length * width + 0.5 * .pi * radius * radius
+        
+        
+        return length * width + length2 * width2
     }
     
     var areaResult: String {
@@ -109,13 +117,13 @@ struct TwoRectangleView: View {
                     .frame(height:100)
                     
                     
-//                    Text("Selected landscaping type:")
-//                        .font(.title2)
-//                        .bold()
-//                    Text(selectedLandscapeType.name)
-//                        .font(.title2)
-//
-//                    Spacer(minLength: 15)
+                    //                    Text("Selected landscaping type:")
+                    //                        .font(.title2)
+                    //                        .bold()
+                    //                    Text(selectedLandscapeType.name)
+                    //                        .font(.title2)
+                    //
+                    //                    Spacer(minLength: 15)
                     
                     
                 }
@@ -124,76 +132,96 @@ struct TwoRectangleView: View {
                 //text fields
                 Group{
                     VStack (spacing: 10){
-                        HStack{
-                            Text("Enter Width")
-                                .font(Font.custom("Helvetica", size:20))
-                                .bold()
-                            Spacer()
-                        }
-                        TextField("Width...", text: $givenWidth)
-                            .font(.title2)
-                        HStack{
-                            Text("Enter Length")
-                                .font(Font.custom("Helvetica", size:20))
-                                .bold()
-                            Spacer()
-                        }
-                        TextField("Length...", text: $givenLength)
-                            .font(.title2)
-                        HStack{
-                            Text("Enter Radius")
-                                .font(Font.custom("Helvetica", size:20))
-                                .bold()
-                            Spacer()
-                        }
-                        TextField("Radius...", text: $givenRadius)
-                            .font(.title2)
-                    }
-                }
-                
-                //results
-                
-                Group{
-                    
-                    Text("Area")
-                        .font(Font.custom("Helvetica", size:25))
-                        .bold()
-                    HStack{
-                        Text(areaResult)
-                            .font(.title3)
-                        Text("sq. ft")
-                            .font(.title3)
-                            .bold()
-                    }
-                    
-                    
-                    Spacer()
-                    
-                    Text("Cost")
-                        .font(Font.custom("Helvetica", size:25))
-                        .bold()
-                    HStack{
-                        Text("$")
-                            .font(.title3)
-                            .bold()
                         
-                        Text(priceResult)
-                            .font(.title3)
+                        Group{
+                            HStack{
+                                Text("Enter Width 1")
+                                    .font(Font.custom("Helvetica", size:20))
+                                    .bold()
+                                Spacer()
+                            }
+                            TextField("Width 1...", text: $givenWidth)
+                                .font(.title2)
+                            
+                            
+                            HStack{
+                                Text("Enter Length 1")
+                                    .font(Font.custom("Helvetica", size:20))
+                                    .bold()
+                                Spacer()
+                            }
+                            TextField("Length 1...", text: $givenLength)
+                                .font(.title2)
+                            
+                        }
+                        
+                        Group{
+                            HStack{
+                                Text("Enter Width 2")
+                                    .font(Font.custom("Helvetica", size:20))
+                                    .bold()
+                                Spacer()
+                            }
+                            TextField("Width 2...", text: $givenWidthTwo)
+                                .font(.title2)
+                            
+                            
+                            
+                            HStack{
+                                Text("Enter Length 2")
+                                    .font(Font.custom("Helvetica", size:20))
+                                    .bold()
+                                Spacer()
+                            }
+                            TextField("Length 2...", text: $givenLengthTwo)
+                                .font(.title2)
+                        }
+                        
                     }
                 }
+                    
+                    //results
+                    
+                    Group{
+                        
+                        Text("Area")
+                            .font(Font.custom("Helvetica", size:25))
+                            .bold()
+                        HStack{
+                            Text(areaResult)
+                                .font(.title3)
+                            Text("sq. ft")
+                                .font(.title3)
+                                .bold()
+                        }
+                        
+                        
+                        Spacer()
+                        
+                        Text("Cost")
+                            .font(Font.custom("Helvetica", size:25))
+                            .bold()
+                        HStack{
+                            Text("$")
+                                .font(.title3)
+                                .bold()
+                            
+                            Text(priceResult)
+                                .font(.title3)
+                        }
+                    }
+                    
+                    Spacer(minLength: 15)
+                    
+                }
                 
-                Spacer(minLength: 15)
-                
+                .padding()
             }
-            
-            .padding()
+            .navigationTitle("Landscaping Calculator")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("Landscaping Calculator")
-        .navigationBarTitleDisplayMode(.inline)
+        
     }
-    
-}
-
 struct TwoRectangleView_Previews: PreviewProvider {
     static var previews: some View {
         TwoRectangleView(areaType: LandscapingStructure(areaName: "Two Rectangles", areaPhoto: "two rectangles"))

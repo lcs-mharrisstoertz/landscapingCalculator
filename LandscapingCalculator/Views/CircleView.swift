@@ -15,8 +15,6 @@ struct CircleView: View {
     @State var selectedLandscapeType: LandscapeType = mulch
     
     //dimensions
-    @State var givenLength = ""
-    @State var givenWidth = ""
     @State var givenRadius = ""
     
     // convert selected Landscaping type to price

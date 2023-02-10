@@ -17,7 +17,6 @@ struct RectangleView: View {
     //dimensions
     @State var givenLength = ""
     @State var givenWidth = ""
-    @State var givenRadius = ""
     
     // convert selected Landscaping type to price
     
