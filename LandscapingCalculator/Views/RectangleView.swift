@@ -120,7 +120,7 @@ struct RectangleView: View {
                 Group{
                     VStack (spacing: 10){
                         HStack{
-                            Text("Enter Width")
+                            Text("Enter Width( ft.)")
                                 .font(Font.custom("Helvetica", size:20))
                                 .bold()
                             Spacer()
@@ -128,7 +128,7 @@ struct RectangleView: View {
                         TextField("Width...", text: $givenWidth)
                             .font(.title2)
                         HStack{
-                            Text("Enter Length")
+                            Text("Enter Length ( ft.)")
                                 .font(Font.custom("Helvetica", size:20))
                                 .bold()
                             Spacer()

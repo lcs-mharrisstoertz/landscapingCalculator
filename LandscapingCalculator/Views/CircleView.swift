@@ -116,7 +116,7 @@ struct CircleView: View {
                 Group{
                     VStack (spacing: 10){
                         HStack{
-                            Text("Enter Radius")
+                            Text("Enter Radius ( ft.)")
                                 .font(Font.custom("Helvetica", size:20))
                                 .bold()
                             Spacer()

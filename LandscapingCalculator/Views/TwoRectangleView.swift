@@ -135,7 +135,7 @@ struct TwoRectangleView: View {
                         
                         Group{
                             HStack{
-                                Text("Enter Width 1")
+                                Text("Enter Width 1 ( ft.)")
                                     .font(Font.custom("Helvetica", size:20))
                                     .bold()
                                 Spacer()
@@ -145,7 +145,7 @@ struct TwoRectangleView: View {
                             
                             
                             HStack{
-                                Text("Enter Length 1")
+                                Text("Enter Length 1 ( ft.)")
                                     .font(Font.custom("Helvetica", size:20))
                                     .bold()
                                 Spacer()
@@ -157,7 +157,7 @@ struct TwoRectangleView: View {
                         
                         Group{
                             HStack{
-                                Text("Enter Width 2")
+                                Text("Enter Width 2 ( ft.)")
                                     .font(Font.custom("Helvetica", size:20))
                                     .bold()
                                 Spacer()
@@ -168,7 +168,7 @@ struct TwoRectangleView: View {
                             
                             
                             HStack{
-                                Text("Enter Length 2")
+                                Text("Enter Length 2 ( ft.)")
                                     .font(Font.custom("Helvetica", size:20))
                                     .bold()
                                 Spacer()
